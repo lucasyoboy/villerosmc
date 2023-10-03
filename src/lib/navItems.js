@@ -1,0 +1,1 @@
+export let items = [{name: "Inicio", url: "/", icon: "home"}, {name: "Reglas", url: "/reglas", icon: "bookmark"}, {name: "Mercado Negro", url: "/market", icon: "axe"}]

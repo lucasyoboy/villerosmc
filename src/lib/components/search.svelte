@@ -11,10 +11,10 @@
           <div class="bg-neutral-800 px-4 py-3 rounded-md">
             <div class="flex flex-row justify-between">
                 <div class="flex items-center">
-                    <img src="/Icons/logo.svg" class="w-6 h-6">
+                    <img alt="Logo" src="/Icons/logo.svg" class="w-6 h-6">
                 </div>
                 <div class="-mt-10">
-                    <img src="/Icons/glass.svg" class="w-20 h-20 bg-gray-100 p-3 rounded-2xl">
+                    <img alt="Glass" src="/Icons/glass.svg" class="w-20 h-20 bg-gray-100 p-3 rounded-2xl">
                 </div>
                 <button class="modal-close cursor-pointer" on:click={() => (search.set(false))}>
                     <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
