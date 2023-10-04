@@ -7,7 +7,6 @@
   import "../app.css";
   import {page} from '$app/stores';
   import {items} from '$lib/navItems';
-
   export let data;
 </script>
 <header class="w-full text-white-700 bg-mine-shaft-950 text-white body-font border-b-4 border-zinc-300">

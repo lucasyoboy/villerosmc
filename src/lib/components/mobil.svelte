@@ -3,7 +3,7 @@
   import { mobil } from '$lib/stores';
   import { Icon } from 'svelte-materialdesign-icons';
   import {items} from '$lib/navItems';
-  
+
 </script>
 
 {#if $mobil}
