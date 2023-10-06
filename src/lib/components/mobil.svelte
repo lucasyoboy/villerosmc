@@ -4,6 +4,7 @@
   import { Icon } from 'svelte-materialdesign-icons';
   import {items} from '$lib/navItems';
 
+  mobil.set(false);
 </script>
 
 {#if $mobil}
