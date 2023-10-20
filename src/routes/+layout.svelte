@@ -2,15 +2,30 @@
   import { CheckCircle, Power, Users, ServerStack, ChartBar, Link } from 'svelte-heros-v2';
   import { Icon } from 'svelte-materialdesign-icons';
   import Header from '$lib/partials/header.svelte';
+  import Toast from '$lib/components/toast.svelte';
+  import { MetaTags } from 'svelte-meta-tags'; // Import the MetaTags component.
+  import { navigating, page } from '$app/stores'; // Import the page store to access route-specific data.
+  import { SyncLoader } from 'svelte-loading-spinners';
+
+  // Create a reactive statement to compute meta tags.
+  $: metaTags = {
+    titleTemplate: '%s | VillerosMC', // Default title template.
+    description: 'Villerosmc es el servidor de Minecraft más popular, con diversas modalidades y una activa comunidad, la elección principal de los jugadores.', // Default description.
+    ...$page.data.metaTagsChild // Override with child page meta tags if they exist.
+  };
+
+
   export let data;
 </script>
 
+<MetaTags {...metaTags} />
 <Header/>
+<Toast />
 <body class="font-kanit">
   <div class="container mx-auto px-5">
     <div class="flex flex-col lg:flex-row gap-6 my-10">
       <section class="w-full lg:w-9/12 rounded-t-lg">
-        <slot />
+          <slot />
       </section>
       <section class="w-full lg:w-3/12">
         <div class=" bg-mine-shaft-950 rounded-t-lg mb-5">
@@ -55,7 +70,11 @@
         <a href="https://discord.gg/H2dGwz8">
           <img src="https://discord.com/api/guilds/740701758178984036/widget.png?style=banner2" alt="Discord Banner 2" class="w-full my-4 rounded-md"/>
         </a>
-        <a class="bg-red-500 flex flex-row justify-center items-center p-4 text-white gap-2 text-xl rounded-md" href="https://www.buymeacoffee.com/villerosmc">
+        <a class=" bg-blue-400 flex flex-row justify-center items-center p-4 text-white gap-2 text-xl rounded-md" href="https://servidoresdeminecraft.es/server/vote/BEBgTqnX/play.villerosmc.net">
+          <Icon name="vote" size="30"/>
+          <span> Votar</span>
+        </a>
+        <a class="bg-red-500 flex flex-row justify-center items-center p-4 text-white gap-2 text-xl rounded-md my-4" href="https://www.buymeacoffee.com/villerosmc">
           <Icon name="hand-heart" size="30"/>
           <span> Donacion</span>
         </a>

@@ -21,3 +21,65 @@
 .has-tooltip:hover .tooltip {
     @apply visible z-50;
 }
+
+/* === HEADING STYLE #3 === */
+.three h1 {
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.5em;
+    padding-bottom: 15px;
+    position: relative;
+  }
+  .three h1:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 55px;
+    background-color: theme('colors.blaze-orange.500');
+  }
+  .three h1:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    height: 1px;
+    width: 95%;
+    max-width: 255px;
+    background-color: theme('colors.mine-shaft.500');
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+   }
+    100% {
+      transform: translateX(calc(-250px * 4));
+   }
+ }
+  .slider::before, .slider::after {
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+ }
+  .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+ }
+  .slider::before {
+    left: 0;
+    top: 0;
+ }
+  .slider .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+ }
+  .slider .slide {
+    height: 100px;
+    width: 300px;
+ }

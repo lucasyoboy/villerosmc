@@ -3,6 +3,8 @@
     import {page} from '$app/stores';
     import { Icon } from 'svelte-materialdesign-icons';
     import { afterNavigate, disableScrollHandling } from '$app/navigation';
+    import { navigating } from '$app/stores';
+    import { SyncLoader } from 'svelte-loading-spinners';
 
     afterNavigate(() => {
         disableScrollHandling();

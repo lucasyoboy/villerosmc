@@ -8,6 +8,15 @@ export default {
         'kanit': ['Kanit', 'sans-serif'],
         'VT323': ['VT323', 'sans-serif']
       },
+      animation: {
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+      },
+      keyframes: {
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        }
+      },   
       colors: {
         'blaze-orange': {
           '50': '#fff9ec',
