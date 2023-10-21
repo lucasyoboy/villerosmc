@@ -3,7 +3,7 @@
     import { copy } from 'svelte-copy';
     import { MagnifyingGlass, Bars3BottomRight } from 'svelte-heros-v2';
     import { Icon } from 'svelte-materialdesign-icons';
-    import { mobil, search } from '$lib/stores';
+    import { mobil } from '$lib/stores';
     import "../../app.css";
     import {page} from '$app/stores';
     import {items} from '$lib/navItems';
@@ -21,16 +21,16 @@
           <a href="{item.url}" class="flex flex-row items-center text-md no-underline font-normal hover:text-blue-dark ml-2 gap-2 h-full" class:active={$page.url.pathname === item.url}><Icon name="{item.icon}" />{item.name}</a>
         {/each}
       </div>
-      <Tools classes="md:flex"/>
+      <Tools classes="md:flex justify-start" align="right-0"/>
       <div class="flex flex-row justify-between items-center md:hidden">
         <div class="w-2/6">
-          <a href="#_" on:click={() => (search.set(true))}><MagnifyingGlass size="30"/></a>
+          <Tools classes="!flex justify-start" align="left-0"/>
         </div>
         <div class="bg-mine-shaft-950 rounded-full p-4 -mb-8 shadow-md shadow-mine-shaft-950">
           <img class="h-14 w-14" alt="Inicio" src="/Icons/logo.svg"/>
         </div>
-        <div class="w-2/6">
-          <Tools classes="!flex"/>
+        <div class="w-2/6 flex flex-row items-center justify-end">
+          <a href="#_"><Icon name="menu" width="35" height="40" on:click={() => (mobil.set(!$mobil))}/></a>
         </div>
       </div>
     </nav>

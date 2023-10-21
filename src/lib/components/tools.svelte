@@ -2,9 +2,10 @@
     import { Icon } from "svelte-materialdesign-icons";
     import { dropdown, search } from '$lib/stores';
     export let classes;
+    export let align;
 </script>
 
-<div class="hidden items-center justify-end {classes}">
+<div class="hidden items-center {classes}">
     <div class="relative inline-block text-left">
         <button id="dropdown-button" class="inline-flex justify-center w-full py-2 text-md font-medium text-white bg-mine-shaft-950 items-center" on:click={() => (dropdown.set(!$dropdown))}>
           <Icon  name="minecraft"/>&nbsp&nbspTOOLS
@@ -13,7 +14,7 @@
             </svg>
         </button>
         {#if $dropdown}
-            <div id="dropdown-menu" class="origin-top-right absolute right-0 mt-2 w-48 shadow-lg bg-mine-shaft-950 text-white">
+            <div id="dropdown-menu" class="origin-top-right absolute right-0 {align} mt-2 w-48 shadow-lg bg-mine-shaft-950 text-white">
                 <div class="py-2 p-2" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-button">
                     <a href="/market" class="flex px-4 py-2 text-md  hover:bg-mine-shaft-700 w-full" role="menuitem">
                         <Icon  name="axe"/>&nbsp;Mercado Negro

@@ -13,7 +13,10 @@ export async function load({url}) {
 			description: "Descubre las reglas de nuestro servidor de Minecraft en esta página. Juega de manera segura y respetuosa siguiendo nuestras directrices."
 		}
 	})
+	const res = await fetch(`https://raw.githubusercontent.com/lucasyoboy/villerosmc/main/pages/rules.md`);
+	const content = await res.text();
 	return {
 		metaTagsChild: metaTags, // Return meta tags so they can be consumed by layout.svelte.
+		content
 	};
 }
