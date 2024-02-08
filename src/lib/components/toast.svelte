@@ -5,7 +5,7 @@
 
     export let themes = {
         danger: "#E26D69",
-        success: "#FF870A",
+        success: "#8FCA5C",
         warning: "#f0ad4e",
         info: "#5bc0de",
         default: "#aaaaaa",

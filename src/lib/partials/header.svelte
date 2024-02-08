@@ -9,33 +9,13 @@
     import {items} from '$lib/navItems';
     import Mobil from '$lib/components/mobil.svelte';
     import Search from '$lib/components/search.svelte';
-    import Tools from '$lib/components/tools.svelte';
 
 </script>
 <Search/>
 <Mobil/>
 <header class="w-full text-white-700 bg-mine-shaft-950 text-white body-font border-b-4 border-zinc-300">
-    <nav class="flex flex-col md:flex-row justify-between md:items-center text-center py-0 px-6 w-full shadow-md shadow-blaze-orange-500 relative">
-      <div class="flex-row gap-3 items-center uppercase hidden md:flex h-14 w-full">
-        {#each items as item}
-          <a href="{item.url}" class="flex flex-row items-center text-md no-underline font-normal hover:text-blue-dark ml-2 gap-2 h-full" class:active={$page.url.pathname === item.url}><Icon name="{item.icon}" />{item.name}</a>
-        {/each}
-      </div>
-      <Tools classes="md:flex justify-start" align="right-0"/>
-      <div class="flex flex-row justify-between items-center md:hidden">
-        <div class="w-2/6">
-          <Tools classes="!flex justify-start" align="left-0"/>
-        </div>
-        <div class="bg-mine-shaft-950 rounded-full p-4 -mb-8 shadow-md shadow-mine-shaft-950">
-          <img class="h-14 w-14" alt="Inicio" src="/Icons/logo.svg"/>
-        </div>
-        <div class="w-2/6 flex flex-row items-center justify-end">
-          <a href="#_"><Icon name="menu" width="35" height="40" on:click={() => (mobil.set(!$mobil))}/></a>
-        </div>
-      </div>
-    </nav>
     <div hidden class="bg-[url('/Images/background.webp')] bg-cover bg-center md:block">
-      <div class="flex justify-center items-center py-28">
+      <div class="flex justify-center items-center py-28 backdrop-blur-sm">
         <div class="flex flex-row gap-3 bg-mine-shaft-950 p-5 w-5/12 lg:w-4/12 -mr-7 justify-start rounded-md">
           <img class="h-14 w-14" alt="Inicio" src="/Icons/discord.svg"/>
           <div class="flex justify-center flex-col text-left">
@@ -55,4 +35,16 @@
         </div>
       </div>
     </div>
+    <nav class="container-fluid md:container h-14 mx-auto shadow-2xl">
+      <div class="h-full w-full flex flex-row justify-between">
+        <a href="/" class="md:hidden flex justify-end items-center h-full"><img alt="logo" class="h-full p-2" src="/Icons/logo-text.svg"/></a>
+        <div class="h-full flex flex-row gap-2">
+          {#each items as item}
+            <a href="{item.url}" class="flex justify-center items-center h-full p-4" class:active={$page.url.pathname === item.url}><Icon name="{item.icon}" color="{item.color}" /> &nbsp; {item.name}</a>
+          {/each}
+        </div>
+        <a href="Inciar session" class="md:flex hidden justify-end items-center h-full p-4 bg-blaze-orange-500"><Icon name="minecraft"/>&nbsp; Iniciar sesión</a>
+      </div>
+
+    </nav>
   </header>

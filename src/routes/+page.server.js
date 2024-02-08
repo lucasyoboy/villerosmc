@@ -14,10 +14,7 @@ export async function load({url}) {
 		}
 	})
 
-    const res = await fetch(`https://discord.com/api/v8/invites/H2dGwz8?with_counts=true`);
-	const discord = await res.json();
 	return {
-		metaTagsChild: metaTags, // Return meta tags so they can be consumed by layout.svelte.
-		discord
+		metaTagsChild: metaTags
 	};
 }
