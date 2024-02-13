@@ -1,6 +1,5 @@
 import { writable, derived } from 'svelte/store';
 export const search = writable(false);
-export const mobil = writable(false);
 export const dropdown = writable(false);
 
 const TIMEOUT = 3000

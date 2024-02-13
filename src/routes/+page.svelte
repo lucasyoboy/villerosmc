@@ -5,7 +5,7 @@
 </script>
 
 
-<div class="container mx-auto bg-cover bg-center" style="background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(/Images/home.webp)">
+<div class="bg-cover bg-center " style="background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(/Images/home.webp)">
   <div class="w-full flex flex-wrap items-center justify-between py-32 px-10 backdrop-blur-sm">
     <div class="w-full lg:w-3/6 text-left">
       <p class="text-xl text-white">SERVIDOR DE MINECRAFT SURVIVAL</p>

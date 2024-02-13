@@ -4,7 +4,9 @@
   import { MetaTags } from 'svelte-meta-tags'; // Import the MetaTags component.
   import { page } from '$app/stores'; // Import the page store to access route-specific data.
   import { Icon } from 'svelte-materialdesign-icons';
+  import { redirect } from '@sveltejs/kit';
 
+  let profileLink;
   // Create a reactive statement to compute meta tags.
   $: metaTags = {
     titleTemplate: '%s | VillerosMC', // Default title template.
@@ -20,9 +22,9 @@
 <Header/>
 <Toast />
 <body class="font-kanit">
-  <div class="container mx-auto">
-    <div class="flex flex-col lg:flex-row gap-6 my-6 px-5 md:px-0">
-      <section class="w-full lg:w-9/12 rounded-l-lg">
+  <div class="container-fluid mx-auto md:container">
+    <div class="flex flex-col lg:flex-row gap-6 mb-6 md:mt-6 ">
+      <section class="w-full lg:w-9/12 rounded-none md:rounded-l-lg overflow-hidden">
           <slot />
       </section>
       <section class="w-full lg:w-3/12">
@@ -58,15 +60,15 @@
           </div>
           <div class="pb-4 px-4 flex gap-3 flex-col text-lg">
             <div class="flex flex-row justify-between items-center text-mine-shaft-950 uppercase">
-              <input class="p-3 w-full text-xl rounded-md text-gray-400 bg-gray-200 border-gray-400" placeholder="Lucas_yoboy"/>
+              <input class="p-2 w-full text-xl rounded-l-md text-gray-400 bg-gray-200 border-gray-400" placeholder="Nombre" bind:value={profileLink}/>
+              <button class="bg-blaze-orange-600 p-2 rounded-r-md" on:click={() => window.location.href = '/profile/'+profileLink+''}><Icon name="arrow-right-bold" color="#fff" /></button>
            </div>
           </div>
         </div>
-        
         <a class="p-4 bg-white flex flex-row w-full items-center justify-between rounded-lg" href="https://discord.gg/H2dGwz8">
           <div class="flex flex-row w-full items-center">
             <img alt="discord logo" class="w-16 h-16" src="/Icons/discord.png"/>
-            <span class="text-3xl">ZonaEpica</span>
+            <span class="text-3xl">Discord</span>
           </div>
           <Icon name="chevron-right" color="black" />
         </a>
@@ -79,10 +81,3 @@
     <span>Copyright © 2024 VillerosMC</span>
   </div>
 </body>
-
-  
-<style lang="postcss">
-  :global(html) {
-    background-color: theme(colors.gray.100);
-  }
-</style>
