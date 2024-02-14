@@ -2,7 +2,6 @@
     import { Icon } from 'svelte-materialdesign-icons';
     import { notifications } from '$lib/stores';
     import { copy } from 'svelte-copy';
-
     export let data;
 
     function toHoursAndMinutes(total) {

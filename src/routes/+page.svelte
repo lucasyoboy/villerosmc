@@ -22,7 +22,7 @@
 </div>
 <div class="bg-mine-shaft-950 flex flex-col gap-15">
   <div class="flex flex-col 2xl:flex-row gap-10 p-10">
-    <img alt="about us" class="rounded-lg h-52 object-cover" src="https://pt.moyens.net/wp-content/uploads/2021/12/1638866941_Os-5-itens-mais-importantes-para-construir-no-Minecraft-Survival.jpg">
+    <img alt="about us" class="rounded-lg h-52 object-cover" src="/Images/world.webp">
     <div>
       <h1 class="text-4xl text-white font-semibold mb-5 uppercase">Explora, construye y conquista</h1>
       <hr class="border-t-4 border-blaze-orange-600 mb-5">
@@ -35,7 +35,7 @@
       <hr class="border-t-4 border-blaze-orange-600 mb-5">
       <span class=" text-white text-xl">Nuestro equipo de soporte está siempre disponible para ayudarte, y nos esforzamos por mantener el servidor actualizado con las últimas versiones de Minecraft.</span>
     </div>
-    <img alt="about us" class="rounded-lg h-52 object-cover" src="https://help.minecraft.net/hc/static/media/Contact_Us_Form_Banner_Mobile.f4c4f8b76c078d364485.jpg">
+    <img alt="about us" class="rounded-lg h-52 object-cover" src="/Images/support.webp">
   </div>
   <div class="flex flex-col gap-5 p-10 justify-center items-center md:flex-row ">
     <span class="text-blaze-orange-400 text-2xl">Conéctate con nosotros:</span> 

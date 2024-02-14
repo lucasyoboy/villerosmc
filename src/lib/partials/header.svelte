@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <nav class="container-fluid md:container h-14 mx-auto shadow-2xl">
+    <nav class="container-fluid h-14 mx-auto shadow-2xl">
       <div class="h-full w-full flex flex-row justify-between">
         <a href="/" class="md:hidden flex justify-end items-center h-full"><img alt="logo" class="h-full p-2" src="/Icons/logo-text.svg"/></a>
         <div class="h-full flex-row gap-2 md:flex hidden">

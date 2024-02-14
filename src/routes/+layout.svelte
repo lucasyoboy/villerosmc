@@ -4,7 +4,6 @@
   import { MetaTags } from 'svelte-meta-tags'; // Import the MetaTags component.
   import { page } from '$app/stores'; // Import the page store to access route-specific data.
   import { Icon } from 'svelte-materialdesign-icons';
-  import { redirect } from '@sveltejs/kit';
 
   let profileLink;
   // Create a reactive statement to compute meta tags.
