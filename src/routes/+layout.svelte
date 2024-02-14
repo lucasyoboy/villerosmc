@@ -46,9 +46,15 @@
             <span>Jugadores enlinea</span>
           </div>
           <div class="pb-4 px-4 flex gap-3 flex-col text-lg">
-            <div class="flex flex-row justify-between items-center text-mine-shaft-950 uppercase">
-              <span>Minecraft</span> <span class="bg-blaze-orange-400 px-2 rounded-md">{data.status.players.online}/{data.status.players.max}</span>
-            </div>
+            {#if data.status.debug.ping}
+              <div class="flex flex-row justify-between items-center text-mine-shaft-950 uppercase">
+                <span>Minecraft</span> <span class="bg-blaze-orange-400 px-2 rounded-md">{data.status.players.online}/{data.status.players.max}</span>
+              </div>
+              {:else}
+              <div class="flex flex-row justify-between items-center text-mine-shaft-950 uppercase">
+                <span>Minecraft</span> <span class="bg-blaze-orange-400 px-2 rounded-md">Offline</span>
+              </div>
+            {/if}
           <div class="flex flex-row justify-between items-center text-mine-shaft-950 uppercase">
              <span>Discord</span><span class="bg-blaze-orange-400 px-2 rounded-md">{data.discord.approximate_presence_count}</span>
           </div>
