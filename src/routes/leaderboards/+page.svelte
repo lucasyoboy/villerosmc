@@ -53,7 +53,6 @@ $: sort = (column) => {
             <table class="w-full table-fixed">
                 <thead>
                     <tr class="bg-mine-shaft-700 text-gray-300">
-                        <th on:click={sort("id")} class="w-1/12 py-4 px-2 sm:px-4 text-center uppercase cursor-pointer hover:text-blaze-orange-400">#</th>
                         <th class="w-fit py-4 px-2 sm:px-4 text-left uppercase">Nombre</th>
                         <th on:click={sort("PLAYER_KILLS")} class="w-fit  py-4 px-2 sm:px-4 text-right uppercase cursor-pointer hover:text-blaze-orange-400">Kills</th>
                         <th on:click={sort("DEATHS")} class="w-fit  py-4 px-2 sm:px-4 text-right uppercase cursor-pointer hover:text-blaze-orange-400">Muertes</th>
@@ -62,10 +61,9 @@ $: sort = (column) => {
                 <tbody class="bg-mine-shaft-900">
                     {#each data.leaderboard as row}
                     <tr>
-                        <td class="text-center">{row.id}</td>
-                        <td class="py-4"><a class="flex flex-row items-center gap-3 hover:text-blaze-orange-400" href="/profile/{row.player_name}"><img alt="profile" src="https://mc-heads.net/avatar/475939fb-b5af-3dac-9de7-a601389da505" class="w-8 rounded-md hidden sm:block"/>{row.player_name}</a></td>
+                        <td class="py-4 px-4"><a class="flex flex-row items-center gap-3 hover:text-blaze-orange-400" href="/profile/{row.player_name}"><img alt="profile" src="https://mc-heads.net/avatar/475939fb-b5af-3dac-9de7-a601389da505" class="w-8 rounded-md hidden sm:block"/>{row.player_name}</a></td>
                         <td class="py-4 px-2 sm:px-4 border-gray-200 truncate text-right">{row.PLAYER_KILLS}</td>
-                        <td class="py-4 px-2 sm:px-4 border-gray-200 truncate text-right">{row.DEATHS}</td>
+                        <td class="py-4 px-4 sm:px-4 border-gray-200 truncate text-right">{row.DEATHS}</td>
                     </tr>
                     {/each}
                 </tbody>

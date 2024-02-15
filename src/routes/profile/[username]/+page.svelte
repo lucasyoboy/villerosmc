@@ -46,7 +46,7 @@
         </div>
     </div>
 {:else}
-{#if data.stats.player_uuid == undefined}
+{#if data.stats.isLogged == undefined}
 <div class=" bg-mine-shaft-950">
     <div class="w-full flex h-48 bg-cover bg-[url('/Images/market.webp')] bg-right-bottom">
         <div class="m-5 text-blaze-orange-500">
