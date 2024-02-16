@@ -1,38 +1,12 @@
-# create-svelte
+# VillerosMC
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+VillerosMC es un servidor de Minecraft muy popular en Paraguay. Ofrece diversas modalidades de juego y cuenta con una activa comunidad, lo que lo convierte en la elección principal de los jugadores.
 
-## Creating a project
+## Características del servidor
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Dirección IP del servidor**: La dirección IP para jugar en VillerosMC es play.villerosmc.net.
+- **Versión de Minecraft**: VillerosMC soporta la versión 1.20 de Minecraft.
+- **Ubicación del servidor**: El servidor de VillerosMC está alojado actualmente en Paraguay.
+- **Modalidades de juego**: En VillerosMC puedes jugar en los modos Survival y Economy.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Para más información, puedes visitar su página web o unirte a su servidor de Discord.
