@@ -14,3 +14,4 @@ VillerosMC es un servidor de Minecraft muy popular en Paraguay. Ofrece diversas 
 Para más información, puedes visitar su página web o unirte a su servidor de Discord.
 ---
  <a href="https://www.buymeacoffee.com/villerosmc" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+<a href="https://discord.gg/M3sTyHtcK4"><img src="https://discordapp.com/api/guilds/705278191404843051/widget.png?style=banner2" alt="Discord server"></a>
