@@ -70,10 +70,17 @@
            </div>
           </div>
         </div>
-        <a class="p-4 bg-white flex flex-row w-full items-center justify-between rounded-lg" href="https://discord.gg/H2dGwz8">
+        <a class="p-4 mb-4 bg-white flex flex-row w-full items-center justify-between rounded-lg" href="https://discord.gg/H2dGwz8">
           <div class="flex flex-row w-full items-center">
             <img alt="discord logo" class="w-16 h-16" src="/Icons/discord.png"/>
             <span class="text-3xl">Discord</span>
+          </div>
+          <Icon name="chevron-right" color="black" />
+        </a>
+        <a class="p-4 bg-yellow-400 flex flex-row w-full items-center justify-between rounded-lg" href="https://www.buymeacoffee.com/villerosmc">
+          <div class="flex flex-row w-full items-center">
+            <img alt="discord logo" class="w-12 h-12" src="https://www.svgrepo.com/show/330105/buymeacoffee.svg"/>
+            <span class="text-3xl">Donaciones</span>
           </div>
           <Icon name="chevron-right" color="black" />
         </a>
@@ -83,6 +90,6 @@
     </div>  
   </div>
   <div class="bg-mine-shaft-950 flex items-center justify-center h-14 text-white text-lg">
-    <span>Copyright © 2024 VillerosMC</span>
+    <span>Copyright © 2024 VillerosMC <a class="text-gray-500" href="https://github.com/lucasyoboy/villerosmc">(Version: DEV)</a></span>
   </div>
 </body>

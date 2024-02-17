@@ -33,7 +33,7 @@
     <div class=" bg-mine-shaft-950">
         <div class="w-full flex h-48 bg-cover bg-[url('/Images/market.webp')] bg-right-bottom">
             <div class="m-5 text-blaze-orange-500">
-                <a href="/">/ inicio</a>&nbsp;/&nbsp;<a href="/search">cuenta</a>&nbsp;/&nbsp;<a href="/">{data.username}</a>
+                <a href="/">/ inicio</a>&nbsp;/&nbsp;<a href="/profile/{data.username}">{data.username}</a>
             </div>
         </div>
         <div class="md:mx-10 bg-mine-shaft-900 md:rounded-md">
@@ -50,7 +50,7 @@
 <div class=" bg-mine-shaft-950">
     <div class="w-full flex h-48 bg-cover bg-[url('/Images/market.webp')] bg-right-bottom">
         <div class="m-5 text-blaze-orange-500">
-            <a href="/">/ inicio</a>&nbsp;/&nbsp;<a href="#!">cuenta</a>&nbsp;/&nbsp;<a href="/profile/{data.username}">{data.username}</a>
+            <a href="/">/ inicio</a>&nbsp;/&nbsp;<a href="/profile/{data.username}">{data.username}</a>
         </div>
     </div>
     <div class="md:mx-10 bg-mine-shaft-900 md:rounded-md">
@@ -77,7 +77,7 @@
 <div class=" bg-mine-shaft-950">
     <div class="w-full flex h-48 bg-cover bg-[url('/Images/market.webp')] bg-right-bottom">
         <div class="m-5 text-blaze-orange-500">
-            <a href="/">/ inicio</a>&nbsp;/&nbsp;<a href="/search">cuenta</a>&nbsp;/&nbsp;<a href="/">{data.username}</a>
+            <a href="/">/ inicio</a>&nbsp;/&nbsp;<a href="/profile/{data.username}">{data.username}</a>
         </div>
     </div>
     <div class="md:mx-10 bg-mine-shaft-900 md:rounded-md">

@@ -14,7 +14,7 @@ export async function load({url}) {
 		}
 	})
 
-	const response = await fetch('http://localhost:5173/api/leaderboard');
+	const response = await fetch(url.origin+'/api/leaderboard');
     let leaderboard = await response.json();
 
 	return {

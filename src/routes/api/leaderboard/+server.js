@@ -1,7 +1,7 @@
 import { mysqlconn } from '../mysql';
 
 
-export async function GET({ url }) {
+export async function GET() {
 	let data;
 
 	await mysqlconn.query("SELECT * FROM stats LIMIT 50;")

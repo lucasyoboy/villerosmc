@@ -3,8 +3,9 @@
 import { Icon } from 'svelte-materialdesign-icons';
 
 export let data;
+console.log(data.leaderboard)
 // Holds table sort state.  Initialized to reflect table sorted by id column ascending.
-let sortBy = {col: "id", ascending: true};
+let sortBy = {col: "PLAYER_KILLS", ascending: true};
 
 $: sort = (column) => {
     
@@ -27,6 +28,15 @@ $: sort = (column) => {
     
     data.leaderboard = data.leaderboard.sort(sort);
 }
+
+function isOnline(n) {
+        if(n == 0){
+            return ''
+        }else{
+            return '<span class="bg-green-600 text-xs text-gray-200 px-1 rounded-md">ONLINE</span>'
+        }
+    }
+
 </script>
 
 
@@ -61,7 +71,7 @@ $: sort = (column) => {
                 <tbody class="bg-mine-shaft-900">
                     {#each data.leaderboard as row}
                     <tr>
-                        <td class="py-4 px-4"><a class="flex flex-row items-center gap-3 hover:text-blaze-orange-400" href="/profile/{row.player_name}"><img alt="profile" src="https://mc-heads.net/avatar/475939fb-b5af-3dac-9de7-a601389da505" class="w-8 rounded-md hidden sm:block"/>{row.player_name}</a></td>
+                        <td class="py-4 px-4"><a class="flex flex-row items-center gap-3 hover:text-blaze-orange-400" href="/profile/{row.player_name}"><img alt="profile" src="https://mc-heads.net/avatar/475939fb-b5af-3dac-9de7-a601389da505" class="w-8 rounded-md hidden sm:block"/>{row.player_name}{@html isOnline(row.in_sync)}</a></td>
                         <td class="py-4 px-2 sm:px-4 border-gray-200 truncate text-right">{row.PLAYER_KILLS}</td>
                         <td class="py-4 px-4 sm:px-4 border-gray-200 truncate text-right">{row.DEATHS}</td>
                     </tr>

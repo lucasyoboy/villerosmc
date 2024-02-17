@@ -9,7 +9,7 @@
   <div class="w-full flex flex-wrap items-center justify-between py-32 px-10 backdrop-blur-sm">
     <div class="w-full lg:w-3/6 text-left">
       <p class="text-xl text-white">SERVIDOR DE MINECRAFT SURVIVAL</p>
-      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-semibold uppercase text-blaze-orange-400">VilleroMC</h1>
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-semibold uppercase text-blaze-orange-400">VillerosMC</h1>
       <span class="text-xl text-white">En Paraguay, Villerosmc es el servidor de Minecraft más popular, con diversas modalidades y una activa comunidad, la elección principal de los jugadores.</span>
       <div class="flex flex-row gap-5 mt-5">
         <input readonly class="p-3 w-4/6 text-xl rounded-md text-white border bg-opacity-20 bg-gray-200 border-gray-400" value="play.villerosmc.net" use:copy={'play.villerosmc.net'} on:svelte-copy={() => notifications.success('Has copiado la IP play.villerosmc.net!', 3000)}/>
