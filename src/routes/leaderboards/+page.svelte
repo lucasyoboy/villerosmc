@@ -3,9 +3,8 @@
 import { Icon } from 'svelte-materialdesign-icons';
 
 export let data;
-console.log(data.leaderboard)
 // Holds table sort state.  Initialized to reflect table sorted by id column ascending.
-let sortBy = {col: "PLAYER_KILLS", ascending: true};
+let sortBy = {col: "in_sync", ascending: true};
 
 $: sort = (column) => {
     
