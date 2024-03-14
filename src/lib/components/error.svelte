@@ -1,0 +1,1 @@
+<p class="bg-red-500 text-center p-2 rounded-md text-gray-300">Se ha producido un error. Por favor, inténtelo de nuevo más tarde.</p>

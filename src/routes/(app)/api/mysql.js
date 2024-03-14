@@ -8,5 +8,5 @@ export const mysqlconn = await mysql.createPool({
     password: PUBLIC_DATABASE_PASSWORD,
     database: PUBLIC_DATABASE,
 	multipleStatements: true,
-    enableKeepAlive: true
+    enableKeepAlive: true,
 });

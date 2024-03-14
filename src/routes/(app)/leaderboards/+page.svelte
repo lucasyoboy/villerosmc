@@ -1,6 +1,7 @@
 <script>
 
 import { Icon } from 'svelte-materialdesign-icons';
+import Error from '$lib/components/error.svelte'
 
 export let data;
 // Holds table sort state.  Initialized to reflect table sorted by id column ascending.
@@ -55,28 +56,32 @@ function isOnline(n) {
     </div>
     <div class="mx-5 md:mx-10 text-gray-300">
         <div class="py-5">
-            <span>Clasificaciones de todos los jugadores del servidor actualizadas cada 15 minutos a través de nuestra base de datos. 
+            <span>Clasificaciones de todos los Top 10 jugadores del servidor actualizadas através de nuestra base de datos. 
             En caso de encontrar información incorrecta, por favor, <a class="text-blaze-orange-400 font-semibold" href="mailto:lucasheide62@gmail.com">contáctenos.</a></span>
         </div>
         <div class="pb-5">
-            <table class="w-full table-fixed">
-                <thead>
-                    <tr class="bg-mine-shaft-700 text-gray-300">
-                        <th class="w-fit py-4 px-2 sm:px-4 text-left uppercase">Nombre</th>
-                        <th on:click={sort("PLAYER_KILLS")} class="w-fit  py-4 px-2 sm:px-4 text-right uppercase cursor-pointer hover:text-blaze-orange-400">Kills</th>
-                        <th on:click={sort("DEATHS")} class="w-fit  py-4 px-2 sm:px-4 text-right uppercase cursor-pointer hover:text-blaze-orange-400">Muertes</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-mine-shaft-900">
-                    {#each data.leaderboard as row}
-                    <tr>
-                        <td class="py-4 px-4"><a class="flex flex-row items-center gap-3 hover:text-blaze-orange-400" href="/profile/{row.player_name}"><img alt="profile" src="https://mc-heads.net/avatar/475939fb-b5af-3dac-9de7-a601389da505" class="w-8 rounded-md hidden sm:block"/>{row.player_name}{@html isOnline(row.in_sync)}</a></td>
-                        <td class="py-4 px-2 sm:px-4 border-gray-200 truncate text-right">{row.PLAYER_KILLS}</td>
-                        <td class="py-4 px-4 sm:px-4 border-gray-200 truncate text-right">{row.DEATHS}</td>
-                    </tr>
-                    {/each}
-                </tbody>
-            </table>
+            {#if data.leaderboard.error}
+            <Error/>
+            {:else}
+                <table class="w-full table-fixed">
+                    <thead>
+                        <tr class="bg-mine-shaft-700 text-gray-300">
+                            <th class="w-fit py-4 px-2 sm:px-4 text-left uppercase">Nombre</th>
+                            <th on:click={sort("PLAYER_KILLS")} class="w-fit  py-4 px-2 sm:px-4 text-right uppercase cursor-pointer hover:text-blaze-orange-400">Kills</th>
+                            <th on:click={sort("DEATHS")} class="w-fit  py-4 px-2 sm:px-4 text-right uppercase cursor-pointer hover:text-blaze-orange-400">Muertes</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-mine-shaft-900">
+                        {#each data.leaderboard as row}
+                        <tr>
+                            <td class="py-4 px-4"><a class="flex flex-row items-center gap-3 hover:text-blaze-orange-400" href="/profile/{row.player_name}"><img alt="profile" src="https://mc-heads.net/avatar/475939fb-b5af-3dac-9de7-a601389da505" class="w-8 rounded-md hidden sm:block"/>{row.player_name}{@html isOnline(row.in_sync)}</a></td>
+                            <td class="py-4 px-2 sm:px-4 border-gray-200 truncate text-right">{row.PLAYER_KILLS}</td>
+                            <td class="py-4 px-4 sm:px-4 border-gray-200 truncate text-right">{row.DEATHS}</td>
+                        </tr>
+                        {/each}
+                    </tbody>
+                </table>
+            {/if}
         </div>
     </div>
 </div>

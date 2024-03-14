@@ -11,7 +11,7 @@ export async function handle({ event, resolve }) {
 
     try {
         // get an up-to-date auth store state by verifying and refreshing the loaded auth model (if any)
-        event.locals.pb.authStore.isValid && await event.locals.pb.collection('player_data').authRefresh();
+        event.locals.pb.authStore.isValid && await event.locals.pb.collection('player_user').authRefresh();
     } catch (_) {
         // clear the auth store on failed refresh
         event.locals.pb.authStore.clear();

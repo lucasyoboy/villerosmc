@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="md:mx-10 bg-mine-shaft-900 md:rounded-md">
-            <div class="-mt-10 flex flex-row items-center justify-between p-5">
+            <div class="-mt-10 !mb-50 flex flex-row items-center justify-between p-5">
                 <div class="flex flex-row items-center justify-center w-full">
                     <Icon name="alert" class="w-8 h-8 text-red-500"/>
                     <span class="text-md text-gray-300 font-normal">&nbsp;No pudimos encontrar este jugador</span>
