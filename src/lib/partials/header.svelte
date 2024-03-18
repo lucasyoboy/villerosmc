@@ -79,24 +79,17 @@
             &nbsp;Iniciar sesión</span>
           </a>
           {:else}
-          <style>
-            #sortbox:checked ~ #sortboxmenu {
-                opacity: 1;
-            }
-          </style>        
-          <div class="relative">
-            <input type="checkbox" id="sortbox" class="hidden absolute ">
-            <label for="sortbox" class="flex items-center space-x-1 cursor-pointer w-full h-full p-4 bg-blaze-orange-500">
-            <div class="text-lg flex flex-row items-center"><Icon name="account-circle-outline"/>&nbsp;<span class="hidden md:inline-block">{data.username}</div>
-            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </label>
-              <div id="sortboxmenu" class="absolute mt-1 right-1 top-full w-full shadow rounded opacity-0 bg-mine-shaft-950 transition delay-75 ease-in-out z-10">
-                <ul class="block text-center text-gray-300">
-                    <li><a href="/user/{data.username}" class="block px-3 py-2 hover:bg-blaze-orange-500"><Icon name="account-arrow-left-outline" class="inline-block" />&nbsp;Cuenta</a></li>
-                    <li><form action="/auth/?/logout" method="POST" use:enhance><button class="block px-3 py-2 hover:bg-blaze-orange-500 w-full"><Icon name="logout" class="inline-block" />&nbsp;Logout</button></form></li>
-                </ul>
+          <div class="relative inline-block tooltip">
+            <a href="#!" class="w-full h-full p-4 hover:text-blaze-orange-100 bg-blaze-orange-500 text-lg flex flex-row items-center"><Icon name="account-circle"/>&nbsp;<span class="hidden md:inline-block">{data.username}</a>
+            <div class="flex flex-col p-4 bg-mine-shaft-950 w-full h-fit rounded-md z-20 absolute right-0 invisible tooltip-item ">
+              <ul class="list-disc space-y-2">
+                <li class="flex items-start hover:text-blaze-orange-400">
+                  <a href="/user/{data.username}"class=" inline-block"><Icon name="account-arrow-left" class="inline-block"/><span class="hidden md:inline-block">&nbsp;Cuenta</span></a>
+                </li>
+                <li class="flex items-start hover:text-blaze-orange-400">
+                  <a href="/auth/logout"class=" inline-block"><Icon name="logout" class="inline-block"/>&nbsp;<span class="hidden md:inline-block">&nbsp;Cerrar sesion</span></a>
+                </li>
+              </ul>
             </div>
           </div>
         {/if}

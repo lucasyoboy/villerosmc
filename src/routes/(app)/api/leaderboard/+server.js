@@ -1,10 +1,10 @@
 import { mysqlconn } from '../mysql';
-let data = {};
 
 export async function GET() {
+	let data = {};
 
 	try {
-		await mysqlconn.query("SELECT * FROM stats LIMIT 10;")
+		await mysqlconn.query("SELECT USERNAME, player_is_online, player_kills, player_deaths FROM stats LIMIT 10;")
 		.then(async function([rows]) {
 			data = rows;
 		});
